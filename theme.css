@@ -3493,6 +3493,16 @@ body:has(#loginPage) .header { display: none !important; }
     filter: brightness(0.9) !important;
 }
 
+/* ====================== STAR ICON - YELLOW ====================== */
+
+.starIcon.star,
+.material-icons.starIcon,
+.starIcon {
+    color: #ffd700 !important;           /* Bright gold/yellow star */
+    -webkit-text-fill-color: #ffd700 !important;
+    text-shadow: 0 0 4px rgba(255, 215, 0, 0.5) !important;   /* Optional glow */
+}
+
 /* ====================== TMDB REVIEW CARD - MATCH THEME ====================== */
 
 .tmdb-review-card {
