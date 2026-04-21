@@ -3717,3 +3717,17 @@ body:has(#loginPage) .header { display: none !important; }
 .spotlight-info-button {
   position: relative !important;
 }
+
+
+/* === FIX TOP TABS (Home / Favourites) - Remove phantom icon spacing === */
+.noHomeButtonHeader .emby-tab-button[data-index="0"]:before,
+.noHomeButtonHeader .emby-tab-button[data-index="1"]:before,
+.noHomeButtonHeader .emby-tab-button:before {
+  content: none !important;           /* kill the invisible icon */
+  padding-inline-end: 0 !important;
+}
+
+/* Make tab padding perfectly balanced again */
+.headerTabs.sectionTabs .emby-tab-button {
+  padding: 0 1.25em !important;       /* symmetric left/right */
+}
