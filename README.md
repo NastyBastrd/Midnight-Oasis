@@ -2,10 +2,10 @@
 
 For this theme to look best, we also recommend enabling backdrops in your Jellyfin settings.
 
-![Midnight Oasis Preview](./assets/image1.png)
+![Midnight Oasis Preview](./image1.png)
 
 
-![Midnight Oasis Preview2](./assets/image2.png)
+![Midnight Oasis Preview2](./image2.png)
 
 ## 📦 Install
 
