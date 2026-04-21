@@ -3731,3 +3731,66 @@ body:has(#loginPage) .header { display: none !important; }
 .headerTabs.sectionTabs .emby-tab-button {
   padding: 0 1.25em !important;       /* symmetric left/right */
 }
+
+/* === QUEUE FAB - Match Midnight Oasis theme styling === */
+#jf-queue-fab {
+  background: var(--lighterGradientPoint) !important;
+  border: var(--defaultBorder) !important;
+  border-radius: var(--largeRadius) !important;
+  box-shadow: var(--shadow) !important;
+  color: var(--textColor) !important;
+  padding: 0.7em 1.1em !important;
+  font-size: 1.05em !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5em !important;
+  transition: all 125ms ease !important;
+  bottom: 32px !important;
+  z-index: 1000 !important;
+}
+
+/* Icon styling (matches other buttons) */
+#jf-queue-fab .material-icons {
+  font-size: 1.35em !important;
+  color: var(--textColor) !important;
+}
+
+/* Count badge styling */
+#jf-queue-fab .jfq-count {
+  background: var(--uiAccentColor, #00b0ff) !important;
+  color: #000 !important;
+  font-size: 0.85em !important;
+  font-weight: 700 !important;
+  padding: 0.1em 0.45em !important;
+  border-radius: 9999px !important;
+  margin-left: 0.3em !important;
+}
+
+/* Hover & Active effects (same as spotlight + detail buttons) */
+#jf-queue-fab:hover {
+  filter: brightness(1.15) !important;
+  transform: scale(1.04) !important;
+}
+
+#jf-queue-fab:active {
+  filter: brightness(0.95) !important;
+  transform: scale(0.97) !important;
+}
+
+/* === INCREASE HOME ICON SIZE (sidebar / header home button) === */
+.material-icons.home,
+.headerHomeButton .material-icons.home,
+.sidebar .material-icons.home {
+  font-size: 1.85em !important;     /* Increase from the theme's small default */
+  line-height: 1 !important;
+}
+
+/* Optional: make it even larger if 1.65em still feels small */
+ /* font-size: 1.85em !important; */
+ 
+.pageTitle,
+.pageTitleWithLogo,
+.pageTitleWithDefaultLogo {
+  height: 3.0em !important;
+}
