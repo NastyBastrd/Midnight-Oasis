@@ -3617,3 +3617,103 @@ body:has(#loginPage) .header { display: none !important; }
 .spotlight-rating-star {
     color: #ffd700 !important;
 }
+
+
+
+/* Fix TMDB Reviews horizontal scroller */
+.tmdb-reviews-section,
+.tmdb-review-swipe-container {
+  display: block !important;
+  grid-template-columns: none !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scrollbar-width: thin !important;
+  -ms-overflow-style: auto !important;
+  padding-bottom: 10px !important; /* space for scrollbar */
+}
+
+/* Make it look clean in Chrome/Edge/Safari */
+.tmdb-review-swipe-container::-webkit-scrollbar {
+  height: 8px !important;
+  background: transparent !important;
+}
+.tmdb-review-swipe-container::-webkit-scrollbar-thumb {
+  background: var(--uiAccentColor, #00b0ff) !important;
+  border-radius: 4px !important;
+}
+
+/* Optional: make the review cards stay in one row */
+.tmdb-review-swipe-container {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 1.5em !important;
+}
+
+.tmdb-review-card {
+  flex: 0 0 auto !important;
+  min-width: 380px !important; /* adjust if you want smaller/larger cards */
+}
+
+
+
+/* === UNIFORM BUTTON SIZE ON ITEM DETAIL PAGE === */
+/* Makes Play button the exact same size as the other action buttons */
+.button-container {
+  gap: 10px !important;
+}
+
+.button-container .detailButton,
+.button-container .btnPlay,
+.button-container button {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important; /* optional: makes them perfectly round */
+}
+
+/* Hide the "Play" text so the Play button becomes icon-only (matches the others) */
+.button-container .btnPlay .play-text {
+  display: none !important;
+}
+
+/* Optional: slightly bigger icons if they feel too small */
+.button-container .material-icons,
+.button-container .play-button::before {
+  font-size: 24px !important;
+}
+
+
+
+/* === FIXED SPOTLIGHT BUTTONS === */
+.spotlight-buttons-container {
+  gap: 0.75em !important; /* slightly wider gap for better balance */
+  align-items: center !important;
+}
+
+/* Force ALL three buttons to the exact same size while keeping the theme's gradient, border, shadow, hover, etc. */
+.spotlight-play-button.emby-button,
+.spotlight-watchlist-button.emby-button,
+.spotlight-info-button.emby-button {
+  width: 2.7em !important;
+  height: 2.7em !important;
+  min-width: 2.7em !important;
+  min-height: 2.7em !important;
+  padding: 0.55em !important;           /* same padding for all */
+  font-size: 1.15em !important;         /* same icon size for all */
+}
+
+/* Specifically tame the Play button (it had extra padding + larger font) */
+.spotlight-play-button.emby-button {
+  padding: 0.55em !important;
+  font-size: 1.15em !important;
+}
+
+/* Keep the nice hover effect and tooltip intact */
+.spotlight-info-button {
+  position: relative !important;
+}
